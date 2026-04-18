@@ -1,4 +1,3 @@
-Markdown
 # Constraint-Aware Metaheuristics for a Vehicle Routing Problem with Time Windows
 
 This repository contains the final implementation of a large-scale optimization project on a Vehicle Routing Problem with Time Windows (VRPTW) with heterogeneous vehicle families and time-dependent travel times.
@@ -31,10 +30,11 @@ The final approach combines several components:
 
 ## Lower bound
 
-To evaluate solution quality, the project also computes a lower bound on a relaxed version of the problem.
+To evaluate solution quality, the project also computes a lower bound on a relaxed version of the problem:
 - A **rental lower bound**, formulated as a fleet-cost covering problem.
 - A **fuel lower bound**, obtained from a degree-2 relaxation.
-These are solved with **HiGHS**.
+
+These relaxed problems are solved with **HiGHS**, allowing us to report a conservative optimality gap.
 
 ## Final results
 
@@ -54,21 +54,32 @@ The final heuristic obtained:
 │   └── problem_statement.pdf
 └── results/
     └── final_results.csv
-Build
+```
+
+## Build
+
 A simple compilation command is:
 
-Bash
+```bash
 g++ -O3 -std=c++17 -march=native src/solver.cpp -o solver
-Usage
+```
+
+## Usage
+
 Example:
 
-Bash
+```bash
 ./solver --instances_dir data/instances --time_limit 600 --seed 11
-Parameters
---instances_dir: directory containing the instance files
+```
 
---time_limit: time limit per instance in seconds
+## Parameters
 
---seed: random seed
+| Parameter | Description |
+|---|---|
+| `--instances_dir` | Directory containing the instance files |
+| `--time_limit` | Time limit per instance in seconds |
+| `--seed` | Random seed |
 
-Author: Noé Hagelauer
+## Author
+
+Noé Hagelauer
