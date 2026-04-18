@@ -47,6 +47,8 @@ The final heuristic obtained:
 ```text
 .
 ├── README.md
+├── LICENSE
+├── .gitignore
 ├── src/
 │   └── solver.cpp
 ├── docs/
