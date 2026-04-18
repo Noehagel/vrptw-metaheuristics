@@ -52,8 +52,10 @@ The final heuristic obtained:
 ├── docs/
 │   ├── project_report.pdf
 │   └── problem_statement.pdf
+├── data/
+│   └── instances/
 └── results/
-    └── final_results.csv
+    └── solutions/
 ```
 
 ## Build
