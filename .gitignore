@@ -1,0 +1,19 @@
+# Executables
+solver
+solver.exe
+a.out
+
+# Build files
+*.o
+*.obj
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
